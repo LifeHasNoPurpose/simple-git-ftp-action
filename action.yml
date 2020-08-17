@@ -1,0 +1,19 @@
+name: Simple git-ftp action
+description: sends files to remote ftp server using git-ftp
+inputs:
+  server:
+    description: 'Destination server path'
+    required: true
+  user:
+    description: 'ftp username'
+    required: true
+  password:
+    description: 'ftp password'
+    required: true
+  git_ftp_params:
+    description: parameters passed directly to git-ftp
+    default:
+    required: false
+using: 'docker'
+  image: 'Dockerfile'
+
